@@ -31,7 +31,6 @@
                 app:layout_collapseMode="parallax"
                 tools:src="@drawable/ic_movie_black_24dp" />
 
-
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"

@@ -62,7 +62,7 @@ class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
                 context.startActivity(singleBlogIntent);
             }
         });
-    }//mau diapakan viewnya
+    }
 
     @Override
     public int getItemCount() {

@@ -26,7 +26,7 @@ public class DetailActivity  extends AppCompatActivity {
     public TextView textViewHeadet;
     public TextView textViewDescet;
     public TextView textViewReview;
-    public ImageView imageViewOtof;
+    public ImageView imageViewPhoto;
     private Integer mPostkey = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +49,7 @@ public class DetailActivity  extends AppCompatActivity {
         textViewHeadet = (TextView) findViewById(R.id.textViewHeadet);
         textViewDescet = (TextView) findViewById(R.id.textViewDescet);
         textViewReview = (TextView) findViewById(R.id.textViewReview);
-        imageViewOtof = (ImageView) findViewById(R.id.imageViewDetail);
+        imageViewPhoto = (ImageView) findViewById(R.id.imageViewDetail);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -79,13 +79,13 @@ public class DetailActivity  extends AppCompatActivity {
 
                             setTitle(" ");
                             textViewHeadet.setText(o.getString("display_title"));
-                            textViewDescet.setText(" Produser " + "\n" + o.getString("byline"));
-                            textViewReview.setText(" Sumary " + "\n" + o.getString("summary_short"));
+                            textViewDescet.setText(" Producer " + "\n" + o.getString("byline"));
+                            textViewReview.setText(" Summary " + "\n" + o.getString("summary_short"));
                             //url = o.getJSONObject("link").getString("url");
                             Glide
                                     .with(DetailActivity.this)
                                     .load(o.getJSONObject("multimedia").getString("src"))
-                                    .into(imageViewOtof);
+                                    .into(imageViewPhoto);
 
 
                         } catch (JSONException e) {
@@ -104,7 +104,5 @@ public class DetailActivity  extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
-
-
 }
 
