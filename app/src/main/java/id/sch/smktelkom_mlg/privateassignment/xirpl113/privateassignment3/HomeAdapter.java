@@ -50,16 +50,16 @@ class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
         Glide
                 .with(context)
                 .load(homeListItem.getImageUrl())
-                .into(holder.imageViewOtof);
+                .into(holder.imageViewPhoto);
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-//                Toast.makeText(context, "Click" + homeListItem.getHead(), Toast.LENGTH_LONG).show();
-//                Intent singleBlogIntent = new Intent(context, DetailActivity.class);
-//                singleBlogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                singleBlogIntent.putExtra("blog_id", position);
-//                context.startActivity(singleBlogIntent);
+                Toast.makeText(context, "Click" + homeListItem.getHead(), Toast.LENGTH_LONG).show();
+                Intent singleBlogIntent = new Intent(context, DetailActivity.class);
+                singleBlogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                singleBlogIntent.putExtra("blog_id", position);
+                context.startActivity(singleBlogIntent);
             }
         });
     }//mau diapakan viewnya
@@ -73,7 +73,7 @@ class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView textViewHead;
         public TextView textViewDesc;
-        public ImageView imageViewOtof;
+        public ImageView imageViewPhoto;
         public LinearLayout linearLayout;
 
         public ViewHolder(View itemView) {
@@ -81,7 +81,7 @@ class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
             textViewHead = (TextView) itemView.findViewById(R.id.textViewHead);
             textViewDesc = (TextView) itemView.findViewById(R.id.textViewDesc);
-            imageViewOtof = (ImageView) itemView.findViewById(R.id.imageViewPhoto);
+            imageViewPhoto = (ImageView) itemView.findViewById(R.id.imageViewPhoto);
             linearLayout = (LinearLayout) itemView.findViewById(R.id.linearLayout);
         }
     }

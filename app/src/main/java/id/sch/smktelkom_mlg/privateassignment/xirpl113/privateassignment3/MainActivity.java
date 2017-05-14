@@ -151,10 +151,10 @@ public class MainActivity extends AppCompatActivity {
             if (position == 0) {
                 return new HomeFragment();
 
-//            } else if (position == 1) {
-//                // getItem is called to instantiate the fragment for the given page.
-//                // Return a PlaceholderFragment (defined as a static inner class below).
-//                //return new NextFragmet();
+            } else if (position == 1) {
+                // getItem is called to instantiate the fragment for the given page.
+                // Return a PlaceholderFragment (defined as a static inner class below).
+                return new NextFragment();
             } else {
                 return PlaceholderFragment.newInstance(position + 1);
             }
