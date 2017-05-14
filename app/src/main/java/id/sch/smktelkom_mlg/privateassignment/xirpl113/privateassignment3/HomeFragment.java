@@ -35,7 +35,7 @@ import java.util.List;
  */
 public class HomeFragment extends Fragment {
 
-    private static final String URL_DATA ="https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=211b58de33064238b255f09b04a38274";
+    private static final String URL_DATA = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=211b58de33064238b255f09b04a38274";
     public List<HomeListItem> listItems;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -54,70 +54,14 @@ public class HomeFragment extends Fragment {
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
         listItems = new ArrayList<>();
-
-        setTitle(getIntent().getStringExtra(MainActivity.SOURCENAME));
-
-        downloadDataArticles();
 
         loadRecyclerViewData();
         // Inflate the layout for this fragment
         return view;
     }
 
-    private void downloadDataArticles()
-    {
-        String id = getIntent().getStringExtra(MainActivity.SOURCEID);
-        String sortby = getIntent().getStringExtra(MainActivity.SOURCESORTBY);
-        String url = "https://newsapi.org/v1/articles?source=" + id
-                + "&sortBy=" + sortby + "&apiKey=d66e77860d7d4fa29be1832f09f8f996";
-
-        GsonGetRequest<ArticlesResponse> myRequest = new GsonGetRequest<ArticlesResponse>
-                (url, ArticlesResponse.class, null, new Response.Listener<ArticlesResponse>()
-                {
-
-                    @Override
-                    public void onResponse(ArticlesResponse response)
-                    {
-                        Log.d("FLOW", "onResponse: " + (new Gson().toJson(response)));
-                        if (response.status.equals("ok"))
-                        {
-                            mList.addAll(response.articles);
-                            mAdapter.notifyDataSetChanged();
-                        }
-                    }
-
-                }, new Response.ErrorListener()
-                {
-
-                    @Override
-                    public void onErrorResponse(VolleyError error)
-                    {
-                        Log.e("FLOW", "onErrorResponse: ", error);
-                    }
-                });
-        VolleySingleton.getInstance(this).addToRequestQueue(myRequest);
-    }
-
-    @Override
-    public void showDetail(String url)
-    {
-        Uri webpage = Uri.parse(url);
-        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
-        if (intent.resolveActivity(getPackageManager()) != null)
-            startActivity(intent);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        if (item.getItemId() == android.R.id.home)
-        {
-            onBackPressed();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
     private void loadRecyclerViewData() {
         final ProgressDialog progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading data ...");
