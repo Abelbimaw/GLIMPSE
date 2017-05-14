@@ -18,7 +18,7 @@ Tabbed Activity->Swipe Views(ViewPager)</br>
 ![1.png](https://s30.postimg.org/4v2a2964h/image.png)</br>
 ![2.png](https://s29.postimg.org/owy82wu9j/image.png)</br>
 
- ### Library dari Local Database yang digunakan pada Aplikasi
+ ### Library from Local Database is used in GLIMPSE
  
  ### Short Description of GLIMPSE: 
  GLIMPSE is an application which allow users to take a peek of the selected movie from the selected section. The Information as follows: Title, Producer, Overview, Release Date, Popularity, Short Description, and Cover Image. Movie data taken from Movies Db and Reviews from New York Time. The use of GLIMPSE is very easy and fast. First section is about the Latest movies in 2017 which used grid type of Recycler View to make it catchy. When you see an interesting movie that you want to know more, simply click the image. Then, the details from the latest movie that you picked will be shown. The next section is about the most reviewed, the utilization is the same as before. The only difference is Most Reviewed section uses List type of Recycler View. It is very recommended to use this when you just want a glimpse of a movie.
