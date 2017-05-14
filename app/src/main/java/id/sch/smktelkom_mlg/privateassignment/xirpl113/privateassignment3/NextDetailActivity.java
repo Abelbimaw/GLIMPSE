@@ -21,7 +21,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class NextDetailActivity extends AppCompatActivity {
-    private static final String URL_DATA = "https://api.themoviedb.org/3/discover/movie?with_genres=35&with_cast=23659&sort_by=revenue.desc&api_key=07a414c01835fd0e21580fe28c87a19f";
+    private static final String URL_DATA = "https://api.themoviedb.org/3/discover/movie?primary_release_year=2017&sort_by=release_date.dsc&api_key=07a414c01835fd0e21580fe28c87a19f";
     public TextView textViewTitle;
     public TextView textViewDesc;
     public TextView textViewRelease;
@@ -80,15 +80,15 @@ public class NextDetailActivity extends AppCompatActivity {
                             JSONArray array = jsonObject.getJSONArray("results");
                             JSONObject o = array.getJSONObject(mKey);
 
-                            setTitle("");
+                            setTitle(o.getString("title"));
                             textViewTitle.setText(o.getString("title"));
                             textViewRelease.setText("Release Date " + "\n" + o.getString("release_date"));
                             textViewDesc.setText("Overview " + "\n" + o.getString("overview"));
                             textViewAnother.setText("Popularity : " + "\n" + o.getString("popularity"));
-                            url = o.getJSONObject("link").getString("url");
+                            //url = o.getJSONObject("link").getString("url");
                             Glide
                                     .with(NextDetailActivity.this)
-                                    .load("http://image.tmdb.org/t/p/w500" + o.getString("poster_path"))
+                                    .load("http://image.tmdb.org/t/p/w500" + o.getString("backdrop_path"))
                                     .into(imageViewPict);
                         } catch (JSONException e) {
                             e.printStackTrace();

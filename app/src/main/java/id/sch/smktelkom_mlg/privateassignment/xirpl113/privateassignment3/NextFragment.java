@@ -29,7 +29,7 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class NextFragment extends Fragment {
-    private static final String URL_DATA = "https://api.themoviedb.org/3/discover/movie?with_genres=35&with_cast=23659&sort_by=revenue.desc&api_key=07a414c01835fd0e21580fe28c87a19f";
+    private static final String URL_DATA = "https://api.themoviedb.org/3/discover/movie?primary_release_year=2017&sort_by=release_date.dsc&api_key=07a414c01835fd0e21580fe28c87a19f";
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -74,7 +74,7 @@ public class NextFragment extends Fragment {
                             for (int i = 0; i < array.length(); i++) {
                                 JSONObject o = array.getJSONObject(i);
                                 NextItem item = new NextItem(
-                                        "https://image.tmdb.org/t/p/w500" + o.getString("poster_path"),
+                                        o.getString("poster_path"),
                                         o.getString("title")
                                 );
                                 NextItems.add(item);

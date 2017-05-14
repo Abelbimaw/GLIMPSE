@@ -55,7 +55,7 @@ class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(context, "Click" + homeListItem.getHead(), Toast.LENGTH_LONG).show();
+                Toast.makeText(context, "Click " + homeListItem.getHead(), Toast.LENGTH_LONG).show();
                 Intent singleBlogIntent = new Intent(context, DetailActivity.class);
                 singleBlogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 singleBlogIntent.putExtra("blog_id", position);

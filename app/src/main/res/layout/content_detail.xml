@@ -28,7 +28,7 @@
                 android:id="@+id/textViewTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Judul"
+                android:text="Title"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
                 android:textSize="20pt" />
 
