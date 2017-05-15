@@ -3,20 +3,23 @@
 ### Short Description:
 - Displaying Information related to Movies which features Most Reviewed and Latest Movies <br>
 
+### Link Download APK:
+- https://mega.nz/#!WEUXiDoa!_57hWmwrk6aZqqhQzW1PMsMeezJ2GLqMLNwIpkt6N-M <br>
+
 ### API Adress that was used in GLIMPSE :
 1. Latest Section <br>
-   https://api.themoviedb.org/3/discover/movie?with_genres=35&with_cast=23659&sort_by=revenue.desc&api_key=07a414c01835fd0e21580fe28c87a19f</br>
-   Address for The Movie Database(TMdb) API : </br>
-   https://www.themoviedb.org/documentation/api</br>
+   https://api.themoviedb.org/3/discover/movie?with_genres=35&with_cast=23659&sort_by=revenue.desc&api_key=07a414c01835fd0e21580fe28c87a19f<br>
+   Address for The Movie Database(TMdb) API : <br>
+   https://www.themoviedb.org/documentation/api<br>
 2. Most Reviewed Section <br>
    https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=211b58de33064238b255f09b04a38274<br>
-   Address for New York Time API : </br>
-   https://developer.nytimes.com/</br>
+   Address for New York Time API : <br>
+   https://developer.nytimes.com/<br>
 
 ### Type of Navigation used in GLIMPSE :
-Tabbed Activity->Swipe Views(ViewPager)</br>
-![1.png](https://s30.postimg.org/4v2a2964h/image.png)</br>
-![2.png](https://s29.postimg.org/owy82wu9j/image.png)</br>
+Tabbed Activity->Swipe Views(ViewPager)<br>
+![1.png](https://s30.postimg.org/4v2a2964h/image.png)<br>
+![2.png](https://s29.postimg.org/owy82wu9j/image.png)<br>
 
  ### Library from Local Database is used in GLIMPSE
  
