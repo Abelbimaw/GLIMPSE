@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
                 case 1:
                     return "MOST REVIEWED";
                 case 2:
-                    return "PINNED";
+                    return "BOOKMARK";
             }
             return null;
         }
