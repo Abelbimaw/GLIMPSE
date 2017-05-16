@@ -42,12 +42,12 @@ Tabbed Activity->Swipe Views(ViewPager)<br>
    <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_1.png" width="40%" height="40%">
    <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_2.png" width="40%" height="40%">
    <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_3.png" width="40%" height="40%">
-   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_4.png" width="40%" height="40%">
-   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_5.png" width="40%" height="40%">
-   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_6.png" width="40%" height="40%">
-   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_7.png" width="40%" height="40%">
-   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_8.png" width="40%" height="40%">
-   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_9.png" width="40%" height="40%">
+   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_4a.png" width="40%" height="40%">
+   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_5a.png" width="40%" height="40%">
+   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_6a.png" width="40%" height="40%">
+   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_7a.png" width="40%" height="40%">
+   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_8a.png" width="40%" height="40%">
+   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_9a.png" width="40%" height="40%">
 </p>
 <br>
 
