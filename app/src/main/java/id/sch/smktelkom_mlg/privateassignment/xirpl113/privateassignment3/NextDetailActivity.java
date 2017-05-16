@@ -1,6 +1,9 @@
 package id.sch.smktelkom_mlg.privateassignment.xirpl113.privateassignment3;
 
 import android.app.ProgressDialog;
+import android.content.SharedPreferences;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -20,6 +23,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 public class NextDetailActivity extends AppCompatActivity {
     private static final String URL_DATA = "https://api.themoviedb.org/3/discover/movie?primary_release_year=2017&sort_by=release_date.dsc&api_key=07a414c01835fd0e21580fe28c87a19f";
     public TextView textViewTitle;
@@ -27,9 +32,12 @@ public class NextDetailActivity extends AppCompatActivity {
     public TextView textViewRelease;
     public TextView textViewAnother;
     public ImageView imageViewPict;
-    public String url;
     private Integer mKey = null;
-
+    public String url;
+    public String imageUrl;
+    PinnedItem pinnedItem;
+    boolean isPressed = true;
+    ArrayList<PinnedItem> fItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,21 +48,21 @@ public class NextDetailActivity extends AppCompatActivity {
 
         mKey = getIntent().getExtras().getInt("blog_id");
         loadRecyclerViewData();
-
-
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
+        
         textViewTitle = (TextView) findViewById(R.id.textViewTitle);
         textViewRelease = (TextView) findViewById(R.id.textViewRelease);
         textViewDesc = (TextView) findViewById(R.id.textViewDesc);
         textViewAnother = (TextView) findViewById(R.id.textViewAnother);
         imageViewPict = (ImageView) findViewById(R.id.imageViewDetail);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                doSimpan();
+                Snackbar.make(view, "The Selected Movie is Bookmarked", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            }
+        });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -63,6 +71,19 @@ public class NextDetailActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+    }
+
+    private void doSimpan() {
+
+        String judul = textViewTitle.getText().toString();
+        String deskripsi = textViewDesc.getText().toString();
+        String urlgambar = imageUrl;
+        pinnedItem = new PinnedItem(judul, deskripsi, urlgambar);
+        pinnedItem.save();
+
+        SharedPreferences.Editor editor = getSharedPreferences(judul, MODE_PRIVATE).edit();
+        editor.putBoolean("isNew", true);
+        editor.commit();
     }
 
     private void loadRecyclerViewData() {
@@ -85,7 +106,8 @@ public class NextDetailActivity extends AppCompatActivity {
                             textViewRelease.setText("Release Date " + "\n" + o.getString("release_date"));
                             textViewDesc.setText("Overview " + "\n" + o.getString("overview"));
                             textViewAnother.setText("Popularity : " + "\n" + o.getString("popularity"));
-                            //url = o.getJSONObject("link").getString("url");
+//                            url = o.getJSONObject("link").getString("url");
+                            imageUrl = "http://image.tmdb.org/t/p/w500" + o.getString("backdrop_path");
                             Glide
                                     .with(NextDetailActivity.this)
                                     .load("http://image.tmdb.org/t/p/w500" + o.getString("backdrop_path"))

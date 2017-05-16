@@ -134,9 +134,9 @@ public class MainActivity extends AppCompatActivity {
                 return new NextFragment();
 
             } else if (position == 1) {
-                // getItem is called to instantiate the fragment for the given page.
-                // Return a PlaceholderFragment (defined as a static inner class below).
                 return new HomeFragment();
+            }  else if (position == 2) {
+                return new PinnedFragment();
             } else {
                 return PlaceholderFragment.newInstance(position + 1);
             }
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 2;
+            return 3;
         }
 
         @Override
@@ -155,6 +155,8 @@ public class MainActivity extends AppCompatActivity {
                     return "LATEST";
                 case 1:
                     return "MOST REVIEWED";
+                case 2:
+                    return "PINNED";
             }
             return null;
         }
