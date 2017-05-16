@@ -34,15 +34,14 @@ Tabbed Activity->Swipe Views(ViewPager)<br>
  3. Faciliate User to be Updated in Latest Movies <br>
 
 ### Application Screenshoot
-![Screenshoot_1.png](https://github.com/faychan/GLIMPSE/blob/master/Screenshot_1.png)
-![Screenshoot_2.png](https://github.com/faychan/GLIMPSE/blob/master/Screenshot_2.png)
-![Screenshoot_3.png](https://github.com/faychan/GLIMPSE/blob/master/Screenshot_3.png)
-![Screenshoot_4.png](https://github.com/faychan/GLIMPSE/blob/master/Screenshot_4.png)
-![Screenshoot_5.png](https://github.com/faychan/GLIMPSE/blob/master/Screenshot_5.png)
-![Screenshoot_6.png](https://github.com/faychan/GLIMPSE/blob/master/Screenshot_6.png)
-![Screenshoot_7.png](https://github.com/faychan/GLIMPSE/blob/master/Screenshot_7.png)
-![Screenshoot_8.png](https://github.com/faychan/GLIMPSE/blob/master/Screenshot_8.png)
-![Screenshoot_9.png](https://github.com/faychan/GLIMPSE/blob/master/Screenshot_9.png)
+<p>
+   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_1.png" width="40%" height="40%">
+   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_2.png" width="40%" height="40%">
+   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_3.png" width="40%" height="40%">
+   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_4.png" width="40%" height="40%">
+   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_5.png" width="40%" height="40%">
+   <img src="https://github.com/faychan/GLIMPSE/blob/master/Screenshot_6.png" width="40%" height="40%">
+</p>
 <br>
 
 ### Identity
