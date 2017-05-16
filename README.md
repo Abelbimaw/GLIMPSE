@@ -1,7 +1,7 @@
 # GLIMPSE
 
 ### Short Description:
-- Displaying Information related to Movies which features Most Reviewed and Latest Movies <br>
+- Displaying Information related to Movies which features Most Reviewed, Latest Movies, and Bookmark <br>
 
 ### Link Download APK:
 - https://mega.nz/#!3RtXWRQC <br>
