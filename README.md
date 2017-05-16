@@ -4,7 +4,7 @@
 - Displaying Information related to Movies which features Most Reviewed, Latest Movies, and Bookmark. <br>
 
 ### Link Download APK:
-- https://mega.nz/#!3RtXWRQC <br>
+- https://mega.nz/#!yMlGzZaZ <br>
 
 ### API Adress that was used in GLIMPSE :
 1. Latest Section <br>
@@ -25,10 +25,9 @@ Tabbed Activity->Swipe Views(ViewPager)<br>
 <br>
 
 ### Library from Local Database is used in GLIMPSE:
-- SugarORM
-<br>
+- SugarORM <br>
 
- ### Short Description of GLIMPSE: 
+### Short Description of GLIMPSE: 
  GLIMPSE is an application which allow users to take a peek and pin the selected movie from the selected section. The Information as follows: Title, Producer, Overview, Release Date, Popularity, Short Description, and Cover Image. Movie data taken from Movies Db and Reviews from New York Time. The use of GLIMPSE is very easy and fast. First section is about the Latest movies in 2017 which used grid type of Recycler View to make it catchy. When you see an interesting movie that you want to know more, simply click the image. Then, the details from the latest movie that you picked will be shown. If you want to bookmark it for later or just want to save the movie data click the floating button. The next section is about the most reviewed, the utilization is the same as before. The only difference is Most Reviewed section uses List type of Recycler View. Same with before, if you want to bookmark it for later or just want to save the data click the floating button. The third section showed the movies that you have bookmarked from the previous section which can be opened online. It is very recommended to use this when you just want a glimpse of a movie.
  
  ### Advantages by using GLIMPSE:
