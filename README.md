@@ -4,7 +4,7 @@
 - Displaying Information related to Movies which features Most Reviewed, Latest Movies, and Bookmark. <br>
 
 ### Link Download APK:
-- https://mega.nz/#!yMlGzZaZ <br>
+- https://mega.nz/#!yMlGzZaZ!_57hWmwrk6aZqqhQzW1PMsMeezJ2GLqMLNwIpkt6N-M <br>
 
 ### API Adress that was used in GLIMPSE :
 1. Latest Section <br>
